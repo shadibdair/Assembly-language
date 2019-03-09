@@ -3,7 +3,7 @@
   <br>
   Assembly-language
   <br>
-  <a href="https://images.slideplayer.com/19/5898467/slides/slide_1.jpg"></a>
+  <a href="https://i.ytimg.com/vi/OTlOXd0C7tc/maxresdefault.jpg"></a>
 
 </h1>
 
