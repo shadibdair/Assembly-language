@@ -3,7 +3,7 @@
   <br>
   Assembly-language
   <br>
-  <a href="https://en3yksrguy-flywheel.netdna-ssl.com/wp-content/uploads/05-Assembly-Branding-Hotel-Logotype-Ragged-Edge-London-UK-BPO.jpg"></a>
+  <a href="https://www.supinfo.com/articles/resources/227993/4449/2.png"></a>
 
 </h1>
 
