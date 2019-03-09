@@ -3,7 +3,7 @@
   <br>
   Assembly-language
   <br>
-  <a href="https://www.supinfo.com/articles/resources/227993/4449/2.png"></a>
+  <a href="https://slideplayer.com/slide/12909422/78/images/1/Assembly+language.jpg"></a>
 
 </h1>
 
