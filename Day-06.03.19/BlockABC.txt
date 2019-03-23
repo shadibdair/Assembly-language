@@ -1,0 +1,71 @@
+DSEG    SEGMENT
+BLOCKA  DB 125,88,140,125,116,170,218,19
+BLOCKB  DB 98,111,191,158,127,160,215,13
+BLOCKC  DB 8 DUP(?) 
+MEOT    DB ?
+ASAROT  DB ?
+AHADOT  DB ?
+DSEG    ENDS       
+SSEG    SEGMENT STACK
+        DB 100H DUP(?)
+SSEG    ENDS
+CSEG    SEGMENT
+        ASSUME CS:CSEG,DS:DSEG,SS:SSEG
+BEGIN:  MOV AX,DSEG
+        MOV DS,AX
+        
+        MOV SI,0;pointer
+        MOV CX,8;counter 
+        MOV BL,10
+        
+AGAIN:  MOV AL,BLOCKA[SI] 
+        
+        MOV AH,0
+        DIV BL
+        MOV AHADOT,AH
+        MOV AH,0
+        DIV BL
+        MOV ASAROT,AH
+        MOV MEOT,AL
+        
+        
+        MOV DL,AHADOT
+        ADD DL,ASAROT
+        ADD DL,MEOT
+        
+        MOV AL,BLOCKB[SI]
+        
+        MOV AH,0
+        DIV BL
+        MOV AHADOT,AH
+        MOV AH,0
+        DIV BL
+        MOV ASAROT,AH
+        MOV MEOT,AL
+       
+        MOV DH,AHADOT
+        ADD DH,ASAROT
+        ADD DH,MEOT
+       
+        
+        CMP DL,DH
+        JA AGADOL      
+        MOV BH,BLOCKB[SI]  
+        MOV BLOCKC[SI],BH
+        JMP GO
+AGADOL: MOV BH,BLOCKA[SI]
+        MOV BLOCKC[SI],BH
+
+GO:     INC SI
+        LOOP AGAIN
+        
+     
+        MOV AH,4CH
+        INT 21H
+        
+
+        
+CSEG    ENDS
+END     BEGIN  
+
+
